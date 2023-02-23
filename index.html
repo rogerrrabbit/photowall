@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sortie CAF</title>
+    <style>
+      body {
+        background-color: black;
+      }
+
+      .click-zoom input[type=checkbox] {
+        display: none
+      }
+
+      /* règles de base pour toutes les tailles d'écran */
+      img {
+        max-width: 90%; /* empêche l'image de déborder de son conteneur */
+        object-fit: contain;
+        margin: 5%;
+        transition: transform 0.3s ease-in-out;
+        cursor: zoom-in
+      }
+
+      /* règles pour les écrans larges */
+      @media screen and (min-width: 1120px) {
+        img {
+          width: 500px; /* limite la largeur de l'image */
+          margin: 5%;
+        }
+      }
+
+      img:hover {
+        transform: scale(1.05);
+      }
+
+      .click-zoom input[type=checkbox]:checked~img {
+        transform: scale(2);
+        cursor: zoom-out
+      }
+
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gallery">
+      <div class="click-zoom"><label><input type="checkbox"><img src="cafyste-11_02_23-1.jpg" alt="Image 1"></label></div>
+      <div class="click-zoom"><label><input type="checkbox"><img src="cafyste-11_02_23-2.jpg" alt="Image 2"></label></div>
+      <div class="click-zoom"><label><input type="checkbox"><img src="cafyste-11_02_23-3.jpg" alt="Image 3"></label></div>
+      <div class="click-zoom"><label><input type="checkbox"><img src="cafyste-11_02_23-4.jpg" alt="Image 4"></label></div>
+      <div class="click-zoom"><label><input type="checkbox"><img src="cafyste-11_02_23-5.jpg" alt="Image 5"></label></div>
+      <div class="click-zoom"><label><input type="checkbox"><img src="cafyste-11_02_23-6.jpg" alt="Image 6"></label></div>
+      <div class="click-zoom"><label><input type="checkbox"><img src="cafyste-11_02_23-7.jpg" alt="Image 7"></label></div>
+      <div class="click-zoom"><label><input type="checkbox"><img src="cafyste-11_02_23-8.jpg" alt="Image 8"></label></div>
+      <div class="click-zoom"><label><input type="checkbox"><img src="cafyste-11_02_23-9.jpg" alt="Image 9"></label></div>
+      <div class="click-zoom"><label><input type="checkbox"><img src="cafyste-11_02_23-10.jpg" alt="Image 10"></label></div>
+    </div>
+  </body>
+</html>c
